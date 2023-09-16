@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -8,6 +8,7 @@ def index():
 
 @app.route('/slideshow', methods=['POST'])
 def slideshow():
+    script = request.form["data"]
     slides = [
         {
             "title": "Hi!",
