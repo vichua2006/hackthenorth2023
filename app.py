@@ -10,7 +10,11 @@ def index():
 @app.route('/slideshow', methods=['POST'])
 def slideshow():
     script = request.form["data"]
-    slides = generate_slides_from_script(script)
+    points, links = generate_slides_from_script(script)
+    slides = zip(points, links)
+    
     return render_template("slideshow.html", slideshow=slides)
+
+# @app.route('/loading', )
 
 app.run(debug=True)

@@ -1,6 +1,5 @@
 from serpapi import GoogleSearch 
 import os 
-import requests
 
 # api key for: https://serpapi.com/
 API_KEY = os.getenv("SERPAPI_KEY")

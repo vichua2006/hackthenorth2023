@@ -13,11 +13,11 @@
             <tr>
                 <td>
                     <div class="slide">           
-                        <h3>{{slide.title}}</h3>
+                        <h3>{{slide[0].title}}</h3>
                         <div class="content">
-                            <img src="{{url_for('static', filename='placeholder3.jpg')}}">
+                            <img src={{slide[1]}}>
                             <ul>
-                                {% for point in slide.points %}
+                                {% for point in slide[0].points %}
                                 <li>{{point}}</li>
                                 {% endfor %}
                             </ul>
@@ -27,14 +27,6 @@
             </tr>
         </table>
         {% endfor %}
-<<<<<<< HEAD
-    </div>
-    {% endfor %}
-
-    <table>
-        
-=======
->>>>>>> 15556a5f0718545652772e70d2fa87ddd2850a43
     </table>
 </body>
 </html>
