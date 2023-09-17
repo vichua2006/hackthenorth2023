@@ -10,5 +10,5 @@ def index():
 @app.route('/slideshow', methods=['POST'])
 def slideshow():
     script = request.form["data"]
-    slides = generate_slides_from_script(script)
-    return render_template("slideshow.html", slideshow=slides)
+    title_slide, slides = generate_slides_from_script("Script2Slides", script)
+    return render_template("slideshow.html", title_slide=title_slide, slideshow=slides)

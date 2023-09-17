@@ -9,8 +9,8 @@ body {
   }
 
 h1 {
-color: navy;
-font-size: 110px;
+color: #5061DD;
+font-size: 90px;
 }
 
 input {
@@ -25,4 +25,25 @@ input {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+textarea {
+    margin-top: 60px;
+    width: 43vw;
+    height: 30vh;
+    border-radius: 5px;
+    font-family: 'Open Sans', sans-serif;
+    padding: 15px 15px;
+    border: 1px solid rgb(30, 30, 153);
+    outline: none;
+}
+
+.submit-button {
+    margin-top: 20px;
+    width: 45vw;
+    height: 7vh;
+    background-color: #5061DD;
+    color: white;
+    border-radius: 5px;
+    border: none;
 }

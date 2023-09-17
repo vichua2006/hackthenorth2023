@@ -5,10 +5,22 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+.title-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+    width: 98vw;
+}
+
 .slide {
     height: 100vh;
     width: 80vw;
     padding: 60px 120px;
+}
+
+h2 {
+    font-size: 100px;
 }
 
 h3 {
