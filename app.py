@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+from gpt import generate_slides_from_script
 
 app = Flask(__name__)
 
@@ -9,13 +10,5 @@ def index():
 @app.route('/slideshow', methods=['POST'])
 def slideshow():
     script = request.form["data"]
-    slides = [
-        {
-            "title": "Hi!",
-            "points": [
-                "point 1",
-                "point 2",
-            ]
-        }
-    ]
+    slides = generate_slides_from_script(script)
     return render_template("slideshow.html", slideshow=slides)

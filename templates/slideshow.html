@@ -4,15 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    {% for slide in slideshow %}
-    <div class="slide">
-        <h3>{{slide.title}}</h3>
-        {% for point in slide.points %}
-        <li>{{point}}</li>
+    <table>
+        {% for slide in slideshow %}
+        <table class="slide-container">
+            <tr>
+                <td>
+                    <div class="slide">           
+                        <h3>{{slide.title}}</h3>
+                        <div class="content">
+                            <img src="{{url_for('static', filename='placeholder3.jpg')}}">
+                            <ul>
+                                {% for point in slide.points %}
+                                <li>{{point}}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+        </table>
         {% endfor %}
-    </div>
-    {% endfor %}
+    </table>
 </body>
 </html>

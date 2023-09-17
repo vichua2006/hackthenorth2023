@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+* {
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.slide {
+    height: 100vh;
+    width: 80vw;
+    padding: 60px 120px;
+}
+
+h3 {
+    font-size: 46px;
+    margin-bottom: 60px;
+}
+
+ul {
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+li {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.content {
+    display: flex;
+}
+
+img {
+    height: 60vh;
+}
