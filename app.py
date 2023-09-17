@@ -9,6 +9,7 @@ def index():
 @app.route('/slideshow', methods=['POST'])
 def slideshow():
     script = request.form["data"]
+    print(script)
     slides = [
         {
             "title": "Hi!",
@@ -19,3 +20,5 @@ def slideshow():
         }
     ]
     return render_template("slideshow.html", slideshow=slides)
+
+app.run(debug=True)
