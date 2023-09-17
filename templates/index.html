@@ -4,12 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTN23</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
 </head>
 <body>
-    <form action="/slideshow" id="form" method="POST">
-        Enter the script
-        <textarea name="data" form="form"></textarea>
-        <input type="submit" value="Create">
-    </form>
+    <div class="container">
+        <h1 style="margin-bottom: 0">Script2Slides</h1>
+        <p>Never make a slideshow again!!</p>
+        <form action="/slideshow" id="form" method="POST">
+            <div style="display: flex; flex-direction: column; font-style: italic;">
+                Enter the script to begin:
+                <textarea style="margin-top: 20px; width: 65vw; height: 25vh;" name="data" form="form"></textarea>
+            </div>
+            <input style="margin-top: 20px; width: 41vw; height: 7vh; background-color: navy; color: white;" type="submit" value="Create">
+        </form>
+    </div>
 </body>
 </html>
