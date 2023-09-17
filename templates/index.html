@@ -3,20 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTN23</title>
+    <title>Script2Slides</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"></script>
 </head>
 <body>
     <div class="container">
-        <h1 style="margin-bottom: 0">Script2Slides</h1>
-        <p>Never make a slideshow again!!</p>
+        <h1 style="margin-bottom: 10px">Script2Slides</h1>
         <form action="/slideshow" id="form" method="POST">
-            <div style="display: flex; flex-direction: column; font-style: italic;">
-                Enter the script to begin:
-                <textarea style="margin-top: 20px; width: 65vw; height: 25vh;" name="data" form="form"></textarea>
+            <div style="display: flex; flex-direction: column;">
+                Never make a slideshow again! Enter the script to begin:
+                <textarea name="data" form="form" placeholder="Start typing here..."></textarea>
             </div>
-            <input style="margin-top: 20px; width: 41vw; height: 7vh; background-color: navy; color: white;" type="submit" value="Create">
+            <input class="submit-button" type="submit" value="Create">
         </form>
     </div>
+    <script>
+        new fullpage('#fullpage', {
+            //options here
+            autoScrolling:true,
+            scrollHorizontally: true
+        });
+    </script>
 </body>
 </html>

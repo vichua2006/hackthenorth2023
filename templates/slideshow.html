@@ -7,7 +7,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <table>
+    <table class="slide-container">
+        <tr>
+            <td>
+                <div class="title-slide">
+                    <h2>{{title_slide}}</h2>
+                </div>
+            </td>
+        </tr>
         {% for slide in slideshow %}
         <table class="slide-container">
             <tr>
